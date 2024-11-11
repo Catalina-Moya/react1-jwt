@@ -1,0 +1,95 @@
+
+.header-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 5rem 2rem; 
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+}
+
+
+.pizza-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); 
+}
+
+
+.header-content h1 {
+    font-size: 4rem; 
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 3px; 
+    color: #ffffff; 
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px; 
+    animation: fadeInUp 1.5s ease-out; 
+}
+
+
+.header-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff; 
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+    100% {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+
+.header-content p {
+    font-size: 1.6rem;
+    margin: 15px 0;
+    line-height: 1.6;
+    font-weight: 500;
+    color: #F8F8F8; 
+    max-width: 600px; 
+    margin: 15px auto; 
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
